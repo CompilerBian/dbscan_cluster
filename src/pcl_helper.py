@@ -39,12 +39,13 @@ def ros_to_pcl(ros_cloud):
             pcl.PointCloud_PointXYZRGB: PCL XYZRGB point cloud
     """
     points_list = []
+    print("i am here!!")
 
     for data in pc2.read_points(ros_cloud, skip_nans=True):
         print(len(data))
         points_list.append([data[0], data[1], data[2]])
 
-    pcl_data = pcl.PointCloud_PointXYZRGB()
+    pcl_data = pcl.PointCloud_PointXYZ()
     pcl_data.from_list(points_list)
 
     return pcl_data
