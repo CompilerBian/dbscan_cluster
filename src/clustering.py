@@ -83,7 +83,7 @@ def pcl_callback(pcl_msg):
 
   # Assign a unique color float for each point (x, y, z)
   # Points with the same color belong to the same cluster
-  colored_points = get_colored_clusters(clusters, colorless_cloud)
+  colored_points = get_colored_clusters(clusters, cloud)
 
   # Create a cloud with each cluster of points having the same color
   clusters_cloud = pcl.PointCloud_PointXYZRGB()
