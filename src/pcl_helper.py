@@ -43,9 +43,10 @@ def ros_to_pcl(ros_cloud):
 
     for data in pc2.read_points(ros_cloud, skip_nans=True):
         print(len(data))
+        print("data: ", data[2])
         points_list.append([data[0], data[1], data[2]])
 
-    pcl_data = pcl.PointCloud_PointXYZ()
+    pcl_data = pcl.PointCloud()
     pcl_data.from_list(points_list)
 
     return pcl_data
