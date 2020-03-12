@@ -48,6 +48,7 @@ def get_colored_clusters(clusters, cloud):
 
   # Get a random unique colors for each object
   number_of_clusters = len(clusters)
+  print(number_of_clusters)
   colors = get_color_list(number_of_clusters)
 
   colored_points = []
