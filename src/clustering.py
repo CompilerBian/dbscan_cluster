@@ -6,7 +6,7 @@ from filtering_helper import *
 
 # This pipeline separates the objects in the table from the given scene
 def split_cloud(cloud):
-
+  print("test")
   # Downsample the cloud as high resolution which comes with a computation cost
   downsampled_cloud = do_voxel_grid_filter(point_cloud=cloud, LEAF_SIZE=0.01)
 
